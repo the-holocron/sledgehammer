@@ -96,15 +96,16 @@ If you only want the CSS, there are several configurations you can choose. The f
   * `text` - only include text
   * `transforms` - only include animations
   * `transitions` - only include transitions
+  * `writing-modes` - only include writing modes
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@theholocron/animate[@<semver>]/dist/<type>.[min].css" />
+<link rel="stylesheet" href="https://unpkg.com/@theholocron/sledgehammer[@<semver>]/dist/<type>.[min].css" />
 ```
 
-Once you've determined how you're going to include the files, then copy the code below, swapping out the `<animation-name>` for one of the ones in a collection. Add `.infinite` to keep the animation going on forever. And if you change out the `$base-class`, as in one of the examples above, then be sure to swap out `animate` for that.
+Once you've determined how you're going to include the files, then copy the code below, swapping out the `<property-name>` for one of the ones in a collection listed above (check each README for a list of the actual properties). By default the `<property-name>` is not responsive, but if you add any one of the keywords (`xs`, `sm`, `md`, `lg`, `xl`) preceded with a dash `-` and combine it with `-up` for sizes at that break point and up, or `-down` for sizes at that breakpoint and down, or `-only` for the range between that particularly break point, you can make it responsive.
 
 ```html
-<div class="animate <animation-name>">Text</div>
+<div class="<property-name>[-<breakpoint keyword>]">Text</div>
 ```
 
 
