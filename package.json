@@ -3,7 +3,7 @@
   "homepage": "https://the-holocron.github.io/sledgehammer",
   "description": "This utility droid provides a set of single-purpose, functional utilities for writing CSS within the Galaxy.",
   "author": "Newton Koumantzelis",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "src/_index.scss",
   "files": [
     "dist",
