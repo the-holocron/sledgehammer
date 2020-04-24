@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/writing-modes" as *;
+
+@include describe("writing modes") {
+	@include it("should print out text-orientation") {
+		@include assert() {
+			@include output() {
+				@include text-orientation();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

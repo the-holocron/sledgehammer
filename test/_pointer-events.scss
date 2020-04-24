@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/pointer-events" as *;
+
+@include describe("pointer events") {
+	@include it("should print out pointer-events") {
+		@include assert() {
+			@include output() {
+				@include pointer-events();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

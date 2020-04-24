@@ -1,0 +1,15 @@
+@use "@theholocron/config/src" as config;
+@use "@theholocron/css-syntaxes/src" as syntaxes;
+@use "../utils";
+
+/// The text-orientation property
+/// @since 0.1.0
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
+/// @param {String} $className ["text-orientation"] - a CSS class name that will prefix all helpers
+/// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
+/// @param {Function} $timing-function [config.$cubic-bezier] - a animation timing function
+/// @example scss
+///   @include text-orientation($className: ttf, $breakpoints: ("sm": 480px));
+@mixin text-orientation($className: "text-orientation", $breakpoints: config.$breakpoints, $timing-function: config.$cubic-bezier) {
+	@include utils.responsive-syntaxes-list($syntaxes: syntaxes.$text-orientation, $property: "text-orientation", $className: $className, $breakpoints: $breakpoints);
+}

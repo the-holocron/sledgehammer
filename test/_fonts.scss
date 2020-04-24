@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/fonts" as *;
+
+@include describe("fonts") {
+	@include it("should print out font-family") {
+		@include assert() {
+			@include output() {
+				@include font-family();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

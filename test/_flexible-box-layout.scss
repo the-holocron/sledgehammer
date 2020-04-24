@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/flexible-box-layout" as *;
+
+@include describe("flexible box layout") {
+	@include it("should print out flex-direction") {
+		@include assert() {
+			@include output() {
+				@include flex-direction();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

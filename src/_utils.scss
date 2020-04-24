@@ -1,0 +1,95 @@
+@use "sass:map";
+@use "@theholocron/config/src" as config;
+@use "@theholocron/scss-mixins/src/at-rules/breakpoints" as *;
+
+@mixin responsive-properties-map($properties, $property, $className: $property, $breakpoints: config.$breakpoints) {
+	.#{$className} {
+		@each $key, $value in $properties {
+			&-#{$key} {
+				#{$property}: $value;
+			}
+
+			@each $breakpoint in map.keys($breakpoints) {
+				@include media-breakpoint-up($breakpoint, $breakpoints) {
+					&-#{$key}-#{$breakpoint},
+					&-#{$key}-#{$breakpoint}-up {
+						#{$property}: $value;
+					}
+				}
+
+				@include media-breakpoint-down($breakpoint, $breakpoints) {
+					&-#{$key}-#{$breakpoint}-down {
+						#{$property}: $value;
+					}
+				}
+
+				@include media-breakpoint-only($breakpoint, $breakpoints) {
+					&-#{$key}-#{$breakpoint}-only {
+						#{$property}: $value;
+					}
+				}
+			}
+		}
+	}
+}
+@mixin responsive-syntaxes-list($syntaxes, $property, $className: $property, $breakpoints: config.$breakpoints, $axes: ()) {
+	.#{$className} {
+		@each $syntax in $syntaxes {
+			&-#{$syntax} {
+				#{$property}: $syntax;
+			}
+
+			@if ($axes) {
+				@each $axis in $axes {
+					&-#{$axis}-#{$syntax}-up {
+						#{$property}-#{$axis}: $syntax;
+					}
+				}
+			}
+
+			@each $breakpoint in map.keys($breakpoints) {
+				@include media-breakpoint-up($breakpoint, $breakpoints) {
+					&-#{$syntax}-#{$breakpoint},
+					&-#{$syntax}-#{$breakpoint}-up {
+						#{$property}: $syntax;
+					}
+				}
+
+				@include media-breakpoint-down($breakpoint, $breakpoints) {
+					&-#{$syntax}-#{$breakpoint}-down {
+						#{$property}: $syntax;
+					}
+				}
+
+				@include media-breakpoint-only($breakpoint, $breakpoints) {
+					&-#{$syntax}-#{$breakpoint}-only {
+						#{$property}: $syntax;
+					}
+				}
+
+				@if ($axes) {
+					@each $axis in $axes {
+						@include media-breakpoint-up($breakpoint, $breakpoints) {
+							&-#{$axis}-#{$syntax}-#{$breakpoint},
+							&-#{$axis}-#{$syntax}-#{$breakpoint}-up {
+								#{$property}-#{$axis}: $syntax;
+							}
+						}
+
+						@include media-breakpoint-down($breakpoint, $breakpoints) {
+							&-#{$axis}-#{$syntax}-#{$breakpoint}-down {
+								#{$property}-#{$axis}: $syntax;
+							}
+						}
+
+						@include media-breakpoint-only($breakpoint, $breakpoints) {
+							&-#{$axis}-#{$syntax}-#{$breakpoint}-only {
+								#{$property}-#{$axis}: $syntax;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

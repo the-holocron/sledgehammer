@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/transforms" as *;
+
+@include describe("transforms") {
+	@include it("should print out backface-visibility") {
+		@include assert() {
+			@include output() {
+				@include backface-visibility();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

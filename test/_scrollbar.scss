@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/scrollbar" as *;
+
+@include describe("scrollbar") {
+	@include it("should print out scrollbar-color") {
+		@include assert() {
+			@include output() {
+				@include scrollbar-color();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/images" as *;
+
+@include describe("images") {
+	@include it("should print out object-fit") {
+		@include assert() {
+			@include output() {
+				@include object-fit();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

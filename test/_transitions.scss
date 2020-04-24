@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/transitions" as *;
+
+@include describe("transitions") {
+	@include it("should print out transition-duration") {
+		@include assert() {
+			@include output() {
+				@include transition-duration();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

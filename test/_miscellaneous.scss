@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/miscellaneous" as *;
+
+@include describe("miscellaneous") {
+	@include it("should print out all") {
+		@include assert() {
+			@include output() {
+				@include all();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

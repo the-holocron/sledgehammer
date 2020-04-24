@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/text-decoration" as *;
+
+@include describe("text decoration") {
+	@include it("should print out text-decoration-line") {
+		@include assert() {
+			@include output() {
+				@include text-decoration-line();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

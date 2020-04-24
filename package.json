@@ -1,0 +1,94 @@
+{
+  "name": "@theholocron/sledgehammer",
+  "homepage": "https://the-holocron.github.io/sledgehammer",
+  "description": "This utility droid provides a set of single-purpose, functional utilities for writing CSS within the Galaxy.",
+  "author": "Newton Koumantzelis",
+  "version": "0.0.0",
+  "main": "src/_index.scss",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": "https://github.com/the-holocron/sledgehammer.git",
+  "bugs": "https://github.com/the-holocron/sledgehammer/issues",
+  "releases": "https://github.com/the-holocron/sledgehammer/releases",
+  "wiki": "https://github.com/the-holocron/sledgehammer/wiki",
+  "license": "GPL-3.0",
+  "alex": {
+    "allow": [
+      "color",
+      "colors",
+      "dead",
+      "disabled",
+      "invalid"
+    ]
+  },
+  "browserslist": [
+    "extends @theholocron/browserslist-config"
+  ],
+  "commitlint": {
+    "extends": [
+      "@theholocron"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged --config @theholocron/lint-staged-config"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": "@theholocron/semantic-release-config",
+    "branch": "master"
+  },
+  "stylelint": {
+    "extends": "@theholocron/stylelint-config",
+    "rules": {
+      "plugin/stylelint-selector-no-empty": null,
+      "scss/at-mixin-named-arguments": null
+    }
+  },
+  "scripts": {
+    "commit": "commit",
+    "docs": "sassdoc src --dest docs",
+    "dist": "npm run sass",
+    "postdist": "postcss dist/*.css --config ./node_modules/@theholocron/postcss-config --use postcss-safe-important --replace",
+    "lint": "stylelint src/**/*.scss --syntax scss",
+    "readme": "for file in src/**/*.scss; do sassdoc2md $file >> ${file%/*}/README.md; done",
+    "release": "semantic-release",
+    "sass": "for file in $(find src -type f -name '*.scss' ! -name '_*'); do sass --load-path=node_modules $file:dist/$(basename $file .scss).css; done",
+    "postsass": "for file in $(find src -type f -name '*.scss' ! -name '_*'); do sass  --load-path=node_modules --style=compressed $file:dist/$(basename $file .scss).min.css; done",
+    "test:scss": "fusv src/",
+    "test:css": "mocha",
+    "test:docs": "alex .",
+    "test": "npm run test:scss && npm run test:docs && npm run test:css"
+  },
+  "dependencies": {
+    "@theholocron/config": "^0.1.0",
+    "@theholocron/css-syntaxes": "^0.1.1",
+    "@theholocron/scss-functions": "^0.1.0",
+    "@theholocron/scss-mixins": "^0.1.1"
+  },
+  "peerDependencies": {
+    "sass": "^1.26.3"
+  },
+  "devDependencies": {
+    "@hidoo/sassdoc-to-markdown": "^0.4.1",
+    "@theholocron/browserslist-config": "latest",
+    "@theholocron/commitlint-config": "latest",
+    "@theholocron/lint-staged-config": "latest",
+    "@theholocron/postcss-config": "latest",
+    "@theholocron/semantic-release-config": "latest",
+    "@theholocron/stylelint-config": "latest",
+    "alex": "^7.1.0",
+    "find-unused-sass-variables": "^1.0.5",
+    "mocha": "^7.0.0",
+    "postcss-safe-important": "^1.2.0",
+    "sass": "^1.26.3",
+    "sass-true": "^5.0.0",
+    "sassdoc": "^2.7.1"
+  }
+}

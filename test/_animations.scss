@@ -1,0 +1,668 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/animations" as *;
+
+@include describe("animations") {
+	@include it("should print out animation-direction") {
+		@include assert() {
+			@include output() {
+				@include animation-direction();
+			}
+
+			@include expect() {
+				.animation-direction-alternate {
+					animation-direction: alternate;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-alternate-xs,
+					.animation-direction-alternate-xs-up {
+						animation-direction: alternate;
+					}
+				}
+				@media (max-width: 33.98em) {
+					.animation-direction-alternate-xs-down {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-alternate-xs-only {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 34em) {
+					.animation-direction-alternate-sm,
+					.animation-direction-alternate-sm-up {
+						animation-direction: alternate;
+					}
+				}
+				@media (max-width: 47.98em) {
+					.animation-direction-alternate-sm-down {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-alternate-sm-only {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 48em) {
+					.animation-direction-alternate-md,
+					.animation-direction-alternate-md-up {
+						animation-direction: alternate;
+					}
+				}
+				@media (max-width: 61.98em) {
+					.animation-direction-alternate-md-down {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-alternate-md-only {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 62em) {
+					.animation-direction-alternate-lg,
+					.animation-direction-alternate-lg-up {
+						animation-direction: alternate;
+					}
+				}
+				@media (max-width: 74.98em) {
+					.animation-direction-alternate-lg-down {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-alternate-lg-only {
+						animation-direction: alternate;
+					}
+				}
+				@media (min-width: 75em) {
+					.animation-direction-alternate-xl,
+					.animation-direction-alternate-xl-up {
+						animation-direction: alternate;
+					}
+				}
+
+				.animation-direction-alternate-xl-down {
+					animation-direction: alternate;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-alternate-xl-only {
+						animation-direction: alternate;
+					}
+				}
+
+				.animation-direction-alternate-reverse {
+					animation-direction: alternate-reverse;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-alternate-reverse-xs,
+					.animation-direction-alternate-reverse-xs-up {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (max-width: 33.98em) {
+					.animation-direction-alternate-reverse-xs-down {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-alternate-reverse-xs-only {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 34em) {
+					.animation-direction-alternate-reverse-sm,
+					.animation-direction-alternate-reverse-sm-up {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (max-width: 47.98em) {
+					.animation-direction-alternate-reverse-sm-down {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-alternate-reverse-sm-only {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 48em) {
+					.animation-direction-alternate-reverse-md,
+					.animation-direction-alternate-reverse-md-up {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (max-width: 61.98em) {
+					.animation-direction-alternate-reverse-md-down {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-alternate-reverse-md-only {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 62em) {
+					.animation-direction-alternate-reverse-lg,
+					.animation-direction-alternate-reverse-lg-up {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (max-width: 74.98em) {
+					.animation-direction-alternate-reverse-lg-down {
+						animation-direction: alternate-reverse;
+					}
+				}
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-alternate-reverse-lg-only {
+						animation-direction: alternate-reverse;
+					}
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-alternate-reverse-xl,
+					.animation-direction-alternate-reverse-xl-up {
+						animation-direction: alternate-reverse;
+					}
+				}
+
+				.animation-direction-alternate-reverse-xl-down {
+					animation-direction: alternate-reverse;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-alternate-reverse-xl-only {
+						animation-direction: alternate-reverse;
+					}
+				}
+
+				.animation-direction-normal {
+					animation-direction: normal;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-normal-xs,
+					.animation-direction-normal-xs-up {
+						animation-direction: normal;
+					}
+				}
+
+				@media (max-width: 33.98em) {
+					.animation-direction-normal-xs-down {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-normal-xs-only {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 34em) {
+					.animation-direction-normal-sm,
+					.animation-direction-normal-sm-up {
+					animation-direction: normal;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+					.animation-direction-normal-sm-down {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-normal-sm-only {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 48em) {
+					.animation-direction-normal-md,
+					.animation-direction-normal-md-up {
+					animation-direction: normal;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+					.animation-direction-normal-md-down {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-normal-md-only {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 62em) {
+					.animation-direction-normal-lg,
+					.animation-direction-normal-lg-up {
+					animation-direction: normal;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+					.animation-direction-normal-lg-down {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-normal-lg-only {
+					animation-direction: normal;
+				}
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-normal-xl,
+					.animation-direction-normal-xl-up {
+					animation-direction: normal;
+				}
+				}
+
+					.animation-direction-normal-xl-down {
+				animation-direction: normal;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-normal-xl-only {
+					animation-direction: normal;
+				}
+				}
+
+					.animation-direction-reverse {
+				animation-direction: reverse;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-reverse-xs,
+					.animation-direction-reverse-xs-up {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+					.animation-direction-reverse-xs-down {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-reverse-xs-only {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 34em) {
+					.animation-direction-reverse-sm,
+					.animation-direction-reverse-sm-up {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+					.animation-direction-reverse-sm-down {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-reverse-sm-only {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 48em) {
+					.animation-direction-reverse-md,
+					.animation-direction-reverse-md-up {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+					.animation-direction-reverse-md-down {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-reverse-md-only {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 62em) {
+					.animation-direction-reverse-lg,
+					.animation-direction-reverse-lg-up {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+					.animation-direction-reverse-lg-down {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-reverse-lg-only {
+					animation-direction: reverse;
+				}
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-reverse-xl,
+					.animation-direction-reverse-xl-up {
+					animation-direction: reverse;
+				}
+				}
+
+					.animation-direction-reverse-xl-down {
+				animation-direction: reverse;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-reverse-xl-only {
+					animation-direction: reverse;
+				}
+				}
+
+					.animation-direction-inherit {
+				animation-direction: inherit;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-inherit-xs,
+					.animation-direction-inherit-xs-up {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+					.animation-direction-inherit-xs-down {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-inherit-xs-only {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 34em) {
+					.animation-direction-inherit-sm,
+					.animation-direction-inherit-sm-up {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+					.animation-direction-inherit-sm-down {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-inherit-sm-only {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 48em) {
+					.animation-direction-inherit-md,
+					.animation-direction-inherit-md-up {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+					.animation-direction-inherit-md-down {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-inherit-md-only {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 62em) {
+					.animation-direction-inherit-lg,
+					.animation-direction-inherit-lg-up {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+					.animation-direction-inherit-lg-down {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-inherit-lg-only {
+					animation-direction: inherit;
+				}
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-inherit-xl,
+					.animation-direction-inherit-xl-up {
+					animation-direction: inherit;
+				}
+				}
+
+					.animation-direction-inherit-xl-down {
+				animation-direction: inherit;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-inherit-xl-only {
+					animation-direction: inherit;
+				}
+				}
+
+					.animation-direction-initial {
+				animation-direction: initial;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-initial-xs,
+					.animation-direction-initial-xs-up {
+					animation-direction: initial;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+					.animation-direction-initial-xs-down {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-initial-xs-only {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 34em) {
+					.animation-direction-initial-sm,
+					.animation-direction-initial-sm-up {
+					animation-direction: initial;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+					.animation-direction-initial-sm-down {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-initial-sm-only {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 48em) {
+					.animation-direction-initial-md,
+					.animation-direction-initial-md-up {
+					animation-direction: initial;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+					.animation-direction-initial-md-down {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-initial-md-only {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 62em) {
+					.animation-direction-initial-lg,
+					.animation-direction-initial-lg-up {
+					animation-direction: initial;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+					.animation-direction-initial-lg-down {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-initial-lg-only {
+					animation-direction: initial;
+				}
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-initial-xl,
+					.animation-direction-initial-xl-up {
+					animation-direction: initial;
+				}
+				}
+
+					.animation-direction-initial-xl-down {
+				animation-direction: initial;
+				}
+
+				@media (min-width: 75em) {
+					.animation-direction-initial-xl-only {
+					animation-direction: initial;
+				}
+				}
+
+					.animation-direction-unset {
+				animation-direction: unset;
+				}
+
+				@media (min-width: 0) {
+					.animation-direction-unset-xs,
+					.animation-direction-unset-xs-up {
+					animation-direction: unset;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+					.animation-direction-unset-xs-down {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+					.animation-direction-unset-xs-only {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 34em) {
+					.animation-direction-unset-sm,
+					.animation-direction-unset-sm-up {
+					animation-direction: unset;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+					.animation-direction-unset-sm-down {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+					.animation-direction-unset-sm-only {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 48em) {
+					.animation-direction-unset-md,
+					.animation-direction-unset-md-up {
+					animation-direction: unset;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+					.animation-direction-unset-md-down {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+					.animation-direction-unset-md-only {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 62em) {
+					.animation-direction-unset-lg,
+					.animation-direction-unset-lg-up {
+					animation-direction: unset;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+					.animation-direction-unset-lg-down {
+					animation-direction: unset;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+					.animation-direction-unset-lg-only {
+						animation-direction: unset;
+					}
+				}
+				@media (min-width: 75em) {
+					.animation-direction-unset-xl,
+					.animation-direction-unset-xl-up {
+						animation-direction: unset;
+					}
+				}
+				.animation-direction-unset-xl-down {
+					animation-direction: unset;
+				}
+				@media (min-width: 75em) {
+					.animation-direction-unset-xl-only {
+					animation-direction: unset;
+				}
+			}
+			}
+		}
+	}
+}

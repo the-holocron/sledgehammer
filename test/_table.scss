@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/table" as *;
+
+@include describe("table") {
+	@include it("should print out border-collapse") {
+		@include assert() {
+			@include output() {
+				@include border-collapse();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

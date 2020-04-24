@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/scroll-snap" as *;
+
+@include describe("scroll snap") {
+	@include it("should print out scroll-snap-align") {
+		@include assert() {
+			@include output() {
+				@include scroll-snap-align();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

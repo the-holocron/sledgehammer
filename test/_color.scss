@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/color" as *;
+
+@include describe("color") {
+	@include it("should print out opacity") {
+		@include assert() {
+			@include output() {
+				@include opacity();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

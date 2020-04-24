@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/fragmentation" as *;
+
+@include describe("fragmentation") {
+	@include it("should print out box-decoration-break") {
+		@include assert() {
+			@include output() {
+				@include box-decoration-break();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

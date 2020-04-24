@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/overflow" as *;
+
+@include describe("overflow") {
+	@include it("should print out overflow") {
+		@include assert() {
+			@include output() {
+				@include overflow();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

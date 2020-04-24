@@ -1,0 +1,32 @@
+// Requirements
+@use "true";
+
+// Tests
+@use "animations";
+@use "backgrounds-borders";
+@use "basic-user-interface";
+@use "box-alignment";
+@use "box-model";
+/*
+@use "color";
+@use "display";
+@use "flexible-box-layout";
+@use "fonts";
+@use "fragmentation";
+@use "images";
+@use "miscellaneous";
+@use "overflow";
+@use "pointer-events";
+@use "positioning";
+@use "scroll-snap";
+@use "scrollbar";
+@use "table";
+@use "text-decoration";
+@use "text";
+@use "transforms";
+@use "transitions";
+@use "writing-modes";
+*/
+
+// Report
+@include true.report();

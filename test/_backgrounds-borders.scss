@@ -1,0 +1,597 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/backgrounds-borders" as *;
+
+@include describe("backgrounds & borders") {
+	@include it("should print out background-attachment") {
+		@include assert() {
+			@include output() {
+				@include background-attachment();
+			}
+
+			@include expect() {
+				.background-attachment-scroll {
+				background-attachment: scroll;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-scroll-xs,
+				.background-attachment-scroll-xs-up {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-scroll-xs-down {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-scroll-xs-only {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-scroll-sm,
+				.background-attachment-scroll-sm-up {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-scroll-sm-down {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-scroll-sm-only {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-scroll-md,
+				.background-attachment-scroll-md-up {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-scroll-md-down {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-scroll-md-only {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-scroll-lg,
+				.background-attachment-scroll-lg-up {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-scroll-lg-down {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-scroll-lg-only {
+					background-attachment: scroll;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-scroll-xl,
+				.background-attachment-scroll-xl-up {
+					background-attachment: scroll;
+				}
+				}
+
+				.background-attachment-scroll-xl-down {
+				background-attachment: scroll;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-scroll-xl-only {
+					background-attachment: scroll;
+				}
+				}
+
+				.background-attachment-fixed {
+				background-attachment: fixed;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-fixed-xs,
+				.background-attachment-fixed-xs-up {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-fixed-xs-down {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-fixed-xs-only {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-fixed-sm,
+				.background-attachment-fixed-sm-up {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-fixed-sm-down {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-fixed-sm-only {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-fixed-md,
+				.background-attachment-fixed-md-up {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-fixed-md-down {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-fixed-md-only {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-fixed-lg,
+				.background-attachment-fixed-lg-up {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-fixed-lg-down {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-fixed-lg-only {
+					background-attachment: fixed;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-fixed-xl,
+				.background-attachment-fixed-xl-up {
+					background-attachment: fixed;
+				}
+				}
+
+				.background-attachment-fixed-xl-down {
+				background-attachment: fixed;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-fixed-xl-only {
+					background-attachment: fixed;
+				}
+				}
+
+				.background-attachment-local {
+				background-attachment: local;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-local-xs,
+				.background-attachment-local-xs-up {
+					background-attachment: local;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-local-xs-down {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-local-xs-only {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-local-sm,
+				.background-attachment-local-sm-up {
+					background-attachment: local;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-local-sm-down {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-local-sm-only {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-local-md,
+				.background-attachment-local-md-up {
+					background-attachment: local;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-local-md-down {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-local-md-only {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-local-lg,
+				.background-attachment-local-lg-up {
+					background-attachment: local;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-local-lg-down {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-local-lg-only {
+					background-attachment: local;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-local-xl,
+				.background-attachment-local-xl-up {
+					background-attachment: local;
+				}
+				}
+
+				.background-attachment-local-xl-down {
+				background-attachment: local;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-local-xl-only {
+					background-attachment: local;
+				}
+				}
+
+				.background-attachment-inherit {
+				background-attachment: inherit;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-inherit-xs,
+				.background-attachment-inherit-xs-up {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-inherit-xs-down {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-inherit-xs-only {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-inherit-sm,
+				.background-attachment-inherit-sm-up {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-inherit-sm-down {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-inherit-sm-only {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-inherit-md,
+				.background-attachment-inherit-md-up {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-inherit-md-down {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-inherit-md-only {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-inherit-lg,
+				.background-attachment-inherit-lg-up {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-inherit-lg-down {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-inherit-lg-only {
+					background-attachment: inherit;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-inherit-xl,
+				.background-attachment-inherit-xl-up {
+					background-attachment: inherit;
+				}
+				}
+
+				.background-attachment-inherit-xl-down {
+				background-attachment: inherit;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-inherit-xl-only {
+					background-attachment: inherit;
+				}
+				}
+
+				.background-attachment-initial {
+				background-attachment: initial;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-initial-xs,
+				.background-attachment-initial-xs-up {
+					background-attachment: initial;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-initial-xs-down {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-initial-xs-only {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-initial-sm,
+				.background-attachment-initial-sm-up {
+					background-attachment: initial;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-initial-sm-down {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-initial-sm-only {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-initial-md,
+				.background-attachment-initial-md-up {
+					background-attachment: initial;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-initial-md-down {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-initial-md-only {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-initial-lg,
+				.background-attachment-initial-lg-up {
+					background-attachment: initial;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-initial-lg-down {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-initial-lg-only {
+					background-attachment: initial;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-initial-xl,
+				.background-attachment-initial-xl-up {
+					background-attachment: initial;
+				}
+				}
+
+				.background-attachment-initial-xl-down {
+				background-attachment: initial;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-initial-xl-only {
+					background-attachment: initial;
+				}
+				}
+
+				.background-attachment-unset {
+				background-attachment: unset;
+				}
+
+				@media (min-width: 0) {
+				.background-attachment-unset-xs,
+				.background-attachment-unset-xs-up {
+					background-attachment: unset;
+				}
+				}
+
+				@media (max-width: 33.98em) {
+				.background-attachment-unset-xs-down {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 0) and (max-width: 33.98em) {
+				.background-attachment-unset-xs-only {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 34em) {
+				.background-attachment-unset-sm,
+				.background-attachment-unset-sm-up {
+					background-attachment: unset;
+				}
+				}
+
+				@media (max-width: 47.98em) {
+				.background-attachment-unset-sm-down {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 34em) and (max-width: 47.98em) {
+				.background-attachment-unset-sm-only {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 48em) {
+				.background-attachment-unset-md,
+				.background-attachment-unset-md-up {
+					background-attachment: unset;
+				}
+				}
+
+				@media (max-width: 61.98em) {
+				.background-attachment-unset-md-down {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 48em) and (max-width: 61.98em) {
+				.background-attachment-unset-md-only {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 62em) {
+				.background-attachment-unset-lg,
+				.background-attachment-unset-lg-up {
+					background-attachment: unset;
+				}
+				}
+
+				@media (max-width: 74.98em) {
+				.background-attachment-unset-lg-down {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 62em) and (max-width: 74.98em) {
+				.background-attachment-unset-lg-only {
+					background-attachment: unset;
+				}
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-unset-xl,
+				.background-attachment-unset-xl-up {
+					background-attachment: unset;
+				}
+				}
+
+				.background-attachment-unset-xl-down {
+				background-attachment: unset;
+				}
+
+				@media (min-width: 75em) {
+				.background-attachment-unset-xl-only {
+					background-attachment: unset;
+				}
+				}
+			}
+		}
+	}
+}

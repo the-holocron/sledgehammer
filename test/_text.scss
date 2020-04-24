@@ -1,0 +1,16 @@
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+@use "sass-true/sass/true" as *;
+@use "../src/text" as *;
+
+@include describe("text") {
+	@include it("should print out letter-spacing") {
+		@include assert() {
+			@include output() {
+				@include letter-spacing();
+			}
+
+			@include expect() {
+			}
+		}
+	}
+}

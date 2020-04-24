@@ -1,0 +1,14 @@
+@use "@theholocron/config/src" as config;
+@use "@theholocron/css-syntaxes/src" as syntaxes;
+@use "../utils";
+
+/// The animation-iteration-count property
+/// @since 0.1.0
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count
+/// @param {String} $className ["animation-iteration-count"] - a CSS class name that will prefix all helpers
+/// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
+/// @example scss
+///   @include animation-iteration-count($className: afm, $breakpoints: ("sm": 480px));
+@mixin animation-iteration-count($className: "animation-iteration-count", $breakpoints: config.$breakpoints) {
+	@include utils.responsive-syntaxes-list($syntaxes: syntaxes.$animation-iteration-count, $property: "animation-iteration-count", $className: $className, $breakpoints: $breakpoints);
+}
