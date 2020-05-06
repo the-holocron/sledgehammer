@@ -9,7 +9,7 @@
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @param {Map} $sizing [config.$sizing] - a map of sizing prefixs
 /// @example scss
-///   @include height($className: h, $breakpoints: ("sm": 480px));
+///   @include height($className: h, $breakpoints: ("sm": 480px), $sizing: ("sm": 480px));
 @mixin height($className: "height", $breakpoints: config.$breakpoints, $sizing: config.$sizing) {
 	@each $prefix in config.$sizing-prefixes {
 		@include utils.responsive-properties-map($properties: $sizing, $property: "#{$prefix}height", $className: #{$prefix}#{$className}, $breakpoints: $breakpoints);

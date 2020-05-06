@@ -5,7 +5,7 @@
 /// The text-overflow property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow
-/// @param {String} $className ["text-overflow"] - a CSS class name that will className all helpers
+/// @param {String} $className ["text-overflow"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include text-overflow($className: toverflow, $breakpoints: ("sm": 480px));

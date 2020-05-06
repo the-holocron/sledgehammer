@@ -5,7 +5,7 @@
 /// The line-break property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/line-break
-/// @param {String} $className ["line-break"] - a CSS class name that will className all helpers
+/// @param {String} $className ["line-break"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include line-break($className: lb, $breakpoints: ("sm": 480px));

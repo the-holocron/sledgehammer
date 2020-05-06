@@ -5,7 +5,7 @@
 /// The transform-box property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box
-/// @param {String} $className ["transform-box"] - a CSS class name that will className all helpers
+/// @param {String} $className ["transform-box"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include transform-box($className: tb, $breakpoints: ("sm": 480px));

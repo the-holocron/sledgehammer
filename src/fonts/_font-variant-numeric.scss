@@ -6,7 +6,7 @@
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric
 /// @link https://www.client9.com/css-georgia-font-stack-with-tabular-numbers/
-/// @param {String} $className ["font-variant-numeric"] - a CSS class name that will className all helpers
+/// @param {String} $className ["font-variant-numeric"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include font-variant-numeric($className: fvn);

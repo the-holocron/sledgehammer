@@ -5,7 +5,7 @@
 /// The perspective-origin property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin
-/// @param {String} $className ["perspective-origin"] - a CSS class name that will className all helpers
+/// @param {String} $className ["perspective-origin"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [onfig.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include perspective-origin($className: bv, $breakpoints: ("sm": 480px));

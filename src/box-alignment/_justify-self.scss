@@ -5,7 +5,7 @@
 /// The justify-self property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
-/// @param {String} $className ["justify-self"] - a CSS class name that will className all helpers
+/// @param {String} $className ["justify-self"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include justify-self($className: fd, $breakpoints: ("sm": 480px));

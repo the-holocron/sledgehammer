@@ -8,6 +8,7 @@
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
 /// @param {String} $className ["border-radius"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
+/// @param {Map} $radii [config.$border-radii] - a map of border radii
 /// @example scss
 ///   @include border-radius($className: br, $breakpoints: ("sm": 480px));
 @mixin border-radii($className: "border-radius", $breakpoints: config.$breakpoints, $radii: config.$border-radii) {

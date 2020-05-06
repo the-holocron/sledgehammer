@@ -5,7 +5,7 @@
 /// The place-self property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/place-self
-/// @param {String} $className ["place-self"] - a CSS class name that will className all helpers
+/// @param {String} $className ["place-self"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include place-self($className: ps, $breakpoints: ("sm": 480px));

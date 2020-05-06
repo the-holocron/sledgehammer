@@ -5,7 +5,7 @@
 /// The word-break property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
-/// @param {String} $className ["word-break"] - a CSS class name that will className all helpers
+/// @param {String} $className ["word-break"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include word-break($className: wbreak, $breakpoints: ("sm": 480px));
