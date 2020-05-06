@@ -16,26 +16,26 @@
 		@each $key, $value in $radii {
 			@each $abbrev, $direction in config.$box-directions {
 				&-#{$abbrev}-#{$key} {
-					@include border-radius($value !important, $direction);
+					@include border-radius($radius: $value, $direction: $direction);
 				}
 
 				@each $breakpoint in map.keys($breakpoints) {
-					@include media-breakpoint-up($breakpoint, $breakpoints) {
+					@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 						&-#{$abbrev}-#{$breakpoint}-#{$key},
 						&-#{$abbrev}-#{$breakpoint}-#{$key}-up {
-							@include border-radius($value !important, $direction);
+							@include border-radius($radius: $value, $direction: $direction);
 						}
 					}
 
-					@include media-breakpoint-down($breakpoint, $breakpoints) {
+					@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 						&-#{$abbrev}-#{$breakpoint}-#{$key}-down {
-							@include border-radius($value !important, $direction);
+							@include border-radius($radius: $value, $direction: $direction);
 						}
 					}
 
-					@include media-breakpoint-only($breakpoint, $breakpoints) {
+					@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 						&-#{$abbrev}-#{$breakpoint}-#{$key}-only {
-							@include border-radius($value !important, $direction);
+							@include border-radius($radius: $value, $direction: $direction);
 						}
 					}
 				}

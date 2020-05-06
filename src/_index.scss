@@ -37,8 +37,11 @@
 @include background-origin();
 @include background-repeat();
 @include background-size();
+@include border-colors();
 @include border-radii();
 @include border-style();
+@include border-widths();
+@include borders();
 @include box-shadow();
 
 // basic user interface
@@ -78,6 +81,8 @@
 // flexible box layout
 @include flex-direction();
 @include flex-flow();
+@include flex-grow();
+@include flex-shrink();
 @include flex-wrap();
 @include order();
 
@@ -111,8 +116,9 @@
 
 // positioning
 @include clear();
+@include directions();
 @include float();
-@include position();
+@include positions();
 @include z-index();
 
 // scroll-snap

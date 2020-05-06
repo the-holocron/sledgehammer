@@ -1,0 +1,14 @@
+@use "sass:map";
+@use "@theholocron/config/src" as config;
+@use "../utils";
+
+/// The flex-shrink property
+/// @since 0.1.0
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
+/// @param {String} $className ["flex-shrink"] - a CSS class name that will prefix all helpers
+/// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
+/// @example scss
+///   @include flex-shrink($className: o, $breakpoints: ("sm": 480px));
+@mixin flex-shrink($className: "flex-shrink", $breakpoints: config.$breakpoints) {
+	@include utils.responsive-properties-map($properties: config.$factors, $property: "flex-shrink", $className: $className, $breakpoints: $breakpoints);
+}

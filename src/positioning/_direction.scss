@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "@theholocron/config/src" as config;
+@use "@theholocron/scss-mixins/src/at-rules/breakpoints" as *;
+@use "@theholocron/scss-mixins/src/positioning/" as *;
+
+/// The direction properties
+/// @since 0.1.0
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/top
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/right
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/bottom
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/left
+/// @param {String} $className ["direction"] - a CSS class name that will prefix all helpers
+/// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
+/// @param {Map} $sizing [config.$sizing] - a map of sizing
+/// @example scss
+///   @include direction($className: dir, $breakpoints: ("sm": 480px), $sizing: ("sm": 480px));
+@mixin directions($className: "direction", $breakpoints: config.$breakpoints, $sizing: config.$sizing) {
+	.#{$className} {
+		@each $key, $value in $sizing {
+			@each $abbrev, $direction in config.$box-directions {
+				&-#{$abbrev}-#{$key} {
+					@include direction($value: $value, $direction: $abbrev);
+				}
+
+				@each $breakpoint in map.keys($breakpoints) {
+					@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
+						&-#{$abbrev}-#{$key}-#{$breakpoint},
+						&-#{$abbrev}-#{$key}-#{$breakpoint}-up {
+							@include direction($value: $value, $direction: $abbrev);
+						}
+					}
+
+					@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
+						&-#{$abbrev}-#{$key}-#{$breakpoint}-down {
+							@include direction($value: $value, $direction: $abbrev);
+						}
+					}
+
+					@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
+						&-#{$abbrev}-#{$key}-#{$breakpoint}-only {
+							@include direction($value: $value, $direction: $abbrev);
+						}
+					}
+				}
+			}
+		}
+	}
+}

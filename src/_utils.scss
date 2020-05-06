@@ -32,7 +32,7 @@
 		}
 	}
 }
-@mixin responsive-syntaxes-list($syntaxes, $property, $className: $property, $breakpoints: config.$breakpoints, $axes: ()) {
+@mixin responsive-syntaxes-list($syntaxes, $property, $className: $property, $breakpoints: config.$breakpoints, $axes: null) {
 	.#{$className} {
 		@each $syntax in $syntaxes {
 			&-#{$syntax} {
@@ -41,7 +41,7 @@
 
 			@if ($axes) {
 				@each $axis in $axes {
-					&-#{$axis}-#{$syntax}-up {
+					&-#{$axis}-#{$syntax} {
 						#{$property}-#{$axis}: $syntax;
 					}
 				}

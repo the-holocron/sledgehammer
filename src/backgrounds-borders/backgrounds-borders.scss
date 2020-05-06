@@ -5,6 +5,9 @@
 @include background-origin();
 @include background-repeat();
 @include background-size();
+@include border-colors();
 @include border-radii();
 @include border-style();
+@include border-widths();
+@include borders();
 @include box-shadow();

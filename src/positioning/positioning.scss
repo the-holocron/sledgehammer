@@ -1,6 +1,7 @@
 @use "index" as *;
 
 @include clear();
+@include directions();
 @include float();
-@include position();
+@include positions();
 @include z-index();

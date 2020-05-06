@@ -47,8 +47,7 @@
   "stylelint": {
     "extends": "@theholocron/stylelint-config",
     "rules": {
-      "plugin/stylelint-selector-no-empty": null,
-      "scss/at-mixin-named-arguments": null
+      "plugin/stylelint-selector-no-empty": null
     }
   },
   "scripts": {
@@ -67,10 +66,10 @@
     "test": "npm run test:scss && npm run test:docs && npm run test:css"
   },
   "dependencies": {
-    "@theholocron/config": "^0.1.0",
-    "@theholocron/css-syntaxes": "^0.1.1",
-    "@theholocron/scss-functions": "^0.1.0",
-    "@theholocron/scss-mixins": "^0.1.1"
+    "@theholocron/config": "^0.3.0",
+    "@theholocron/css-syntaxes": "^0.1.2",
+    "@theholocron/scss-functions": "^0.2.0",
+    "@theholocron/scss-mixins": "^0.3.0"
   },
   "peerDependencies": {
     "sass": "^1.26.3"

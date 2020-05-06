@@ -2,7 +2,7 @@
 @use "@theholocron/config/src" as config;
 @use "@theholocron/css-syntaxes/src" as syntaxes;
 @use "../utils";
-
+/* stylelint-disable scss/at-mixin-named-arguments */
 /// The line-height property
 /// @since 0.1.0
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/line-height

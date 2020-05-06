@@ -9,6 +9,6 @@
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
 /// @example scss
 ///   @include order($className: o, $breakpoints: ("sm": 480px));
-@mixin order($className: order, $breakpoints: config.$breakpoints, $orders: ()) {
-	@include utils.responsive-properties-map($properties: map.merge((first: -1), $orders), $property: "order", $className: $className, $breakpoints: $breakpoints);
+@mixin order($className: "order", $breakpoints: config.$breakpoints) {
+	@include utils.responsive-properties-map($properties: config.$factors, $property: "order", $className: $className, $breakpoints: $breakpoints);
 }

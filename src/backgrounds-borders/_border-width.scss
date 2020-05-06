@@ -1,67 +1,67 @@
 @use "sass:map";
 @use "@theholocron/config/src" as config;
 @use "@theholocron/scss-mixins/src/at-rules/breakpoints" as *;
-@use "@theholocron/scss-mixins/src/box-model/" as *;
+@use "@theholocron/scss-mixins/src/backgrounds-borders/" as *;
 
-/// The padding property
+/// The border-width property
 /// @since 0.1.0
-/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/padding
-/// @param {String} $prefix ["padding"] - a CSS class name that will prefix all helpers
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/border-width
+/// @param {String} $className ["border-width"] - a CSS class name that will prefix all helpers
 /// @param {Map} $breakpoints [config.$breakpoints] - a map of grid breakpoints
-/// @param {Map} $spacing [config.$spacing] - a map of spacing
+/// @param {Map} $widths [config.$border-widths] - a map of border widths
 /// @example scss
-///   @include padding($prefix: p, $breakpoints: ("sm": 480px));
-@mixin padding($className: "padding", $breakpoints: config.$breakpoints, $spacing: config.$spacing) {
+///   @include border-width($className: bs, $breakpoints: ("sm": 480px));
+@mixin border-widths($className: "border-width", $breakpoints: config.$breakpoints, $widths: config.$border-widths) {
 	.#{$className} {
-		@each $key, $value in $spacing {
+		@each $key, $value in $widths {
 			@each $abbrev, $direction in config.$box-directions {
 				@if $abbrev == "all" {
 					&-#{$key} {
-						@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+						@include border-width($width: $value, $direction: $abbrev);
 					}
 
 					@each $breakpoint in map.keys($breakpoints) {
 						@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$key}-#{$breakpoint},
 							&-#{$key}-#{$breakpoint}-up {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 
 						@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$key}-#{$breakpoint}-down {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 
 						@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$key}-#{$breakpoint}-only {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 					}
 				} @else {
 					&-#{$abbrev}-#{$key} {
-						@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+						@include border-width($width: $value, $direction: $abbrev);
 					}
 
 					@each $breakpoint in map.keys($breakpoints) {
 						@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$abbrev}-#{$key}-#{$breakpoint},
 							&-#{$abbrev}-#{$key}-#{$breakpoint}-up {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 
 						@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$abbrev}-#{$key}-#{$breakpoint}-down {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 
 						@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$abbrev}-#{$key}-#{$breakpoint}-only {
-								@include box-model($property: "padding", $value: $value, $direction: $abbrev);
+								@include border-width($width: $value, $direction: $abbrev);
 							}
 						}
 					}

@@ -2,5 +2,7 @@
 
 @include flex-direction();
 @include flex-flow();
+@include flex-grow();
+@include flex-shrink();
 @include flex-wrap();
 @include order();
