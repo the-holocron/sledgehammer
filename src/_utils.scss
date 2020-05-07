@@ -10,20 +10,20 @@
 			}
 
 			@each $breakpoint in map.keys($breakpoints) {
-				@include media-breakpoint-up($breakpoint, $breakpoints) {
+				@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$key}-#{$breakpoint},
 					&-#{$key}-#{$breakpoint}-up {
 						#{$property}: $value;
 					}
 				}
 
-				@include media-breakpoint-down($breakpoint, $breakpoints) {
+				@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$key}-#{$breakpoint}-down {
 						#{$property}: $value;
 					}
 				}
 
-				@include media-breakpoint-only($breakpoint, $breakpoints) {
+				@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$key}-#{$breakpoint}-only {
 						#{$property}: $value;
 					}
@@ -48,20 +48,20 @@
 			}
 
 			@each $breakpoint in map.keys($breakpoints) {
-				@include media-breakpoint-up($breakpoint, $breakpoints) {
+				@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$syntax}-#{$breakpoint},
 					&-#{$syntax}-#{$breakpoint}-up {
 						#{$property}: $syntax;
 					}
 				}
 
-				@include media-breakpoint-down($breakpoint, $breakpoints) {
+				@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$syntax}-#{$breakpoint}-down {
 						#{$property}: $syntax;
 					}
 				}
 
-				@include media-breakpoint-only($breakpoint, $breakpoints) {
+				@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 					&-#{$syntax}-#{$breakpoint}-only {
 						#{$property}: $syntax;
 					}
@@ -69,20 +69,20 @@
 
 				@if ($axes) {
 					@each $axis in $axes {
-						@include media-breakpoint-up($breakpoint, $breakpoints) {
+						@include media-breakpoint-up($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$axis}-#{$syntax}-#{$breakpoint},
 							&-#{$axis}-#{$syntax}-#{$breakpoint}-up {
 								#{$property}-#{$axis}: $syntax;
 							}
 						}
 
-						@include media-breakpoint-down($breakpoint, $breakpoints) {
+						@include media-breakpoint-down($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$axis}-#{$syntax}-#{$breakpoint}-down {
 								#{$property}-#{$axis}: $syntax;
 							}
 						}
 
-						@include media-breakpoint-only($breakpoint, $breakpoints) {
+						@include media-breakpoint-only($name: $breakpoint, $breakpoints: $breakpoints) {
 							&-#{$axis}-#{$syntax}-#{$breakpoint}-only {
 								#{$property}-#{$axis}: $syntax;
 							}
