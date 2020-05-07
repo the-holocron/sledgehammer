@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/the-holocron/starkiller/compare/1.1.0...1.2.0) (2020-05-07)
+
+
+### Features
+
+* name change ([cfae188](https://github.com/the-holocron/starkiller/commit/cfae18812ee96eeb3b879c9608e0aa751bd0c98d))
+
 # [1.1.0](https://github.com/the-holocron/sledgehammer/compare/1.0.0...1.1.0) (2020-05-07)
 
 
