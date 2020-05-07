@@ -1,6 +1,6 @@
 {
-  "name": "@theholocron/sledgehammer",
-  "homepage": "https://the-holocron.github.io/sledgehammer",
+  "name": "@theholocron/starkiller",
+  "homepage": "https://the-holocron.github.io/starkiller",
   "description": "This utility droid provides a set of single-purpose, functional utilities for writing CSS within the Galaxy.",
   "author": "Newton Koumantzelis",
   "version": "1.1.0",
@@ -9,10 +9,10 @@
     "dist",
     "src"
   ],
-  "repository": "https://github.com/the-holocron/sledgehammer.git",
-  "bugs": "https://github.com/the-holocron/sledgehammer/issues",
-  "releases": "https://github.com/the-holocron/sledgehammer/releases",
-  "wiki": "https://github.com/the-holocron/sledgehammer/wiki",
+  "repository": "https://github.com/the-holocron/starkiller.git",
+  "bugs": "https://github.com/the-holocron/starkiller/issues",
+  "releases": "https://github.com/the-holocron/starkiller/releases",
+  "wiki": "https://github.com/the-holocron/starkiller/wiki",
   "license": "GPL-3.0",
   "alex": {
     "allow": [

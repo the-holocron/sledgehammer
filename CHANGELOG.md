@@ -15,4 +15,4 @@ All notable changes to this project will be documented in this file. See
 
 ### Features
 
-* add in initial library ([202dc33](https://github.com/the-holocron/sledgehammer/commit/202dc3357815209f881b7518f874891447cee0cf))
+* add in initial library ([202dc33](https://github.com/the-holocron/starkiller/commit/202dc3357815209f881b7518f874891447cee0cf))
